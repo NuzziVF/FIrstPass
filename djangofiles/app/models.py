@@ -9,3 +9,4 @@ class register_model(models.Model):
 class log_in_model(models.Model):
     username = models.CharField(max_length=100)
     password = models.CharField(max_length=100)
+    

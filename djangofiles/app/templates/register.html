@@ -11,5 +11,13 @@
         </label>
         <button>Enter</button>
     </form>
+    {% if password == repeat_password%}
+        {% if username != None %}
+            <p>{{username}}</p>
+            <p>{{password}}</p>
+        {% endif %}
+    {% else %}
+        <p>passwords don't match</p>
+    {% endif %}
 </body>
 </html>
