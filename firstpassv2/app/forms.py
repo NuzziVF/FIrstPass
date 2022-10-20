@@ -18,3 +18,7 @@ class NewUserForm(UserCreationForm):
 		if commit:
 			user.save()
 		return user
+
+class Passwords(forms.Form):
+	password_for = forms.EmailField(required=True)
+	passwords = forms.EmailField(required=True)
