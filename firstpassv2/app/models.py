@@ -7,7 +7,16 @@ from django.forms import CharField, ModelForm
 class PasswordsModel(models.Model):
     passwords_name = models.CharField(max_length=30)
     password_obj = models.CharField(max_length=50)
-    
+
+
+class Listing(models.Model):
+    # username = models.CharField(max_length=30)
+    passwords_name = models.CharField(max_length=80)
+    password_obj = models.CharField(max_length=80)
+
+    def __str__(self):
+        return self.passwords_name
+
 
 # class PasswordsModelForm(ModelForm):
 #     class Meta:
