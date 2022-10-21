@@ -1,0 +1,96 @@
+body{
+    background-color: #3c3c3c;
+    padding: 0%;
+    margin: 0%;
+    overflow-x: hidden;
+    width: fit-content;
+}
+h1{
+    color: white
+}
+p{
+    color: white
+}
+/* Login Css*/
+/*Keycodebox*/
+.log{
+    height: 65%;
+    width: 26%;
+    background-color: #3D3C3C;
+    top: 20%;
+    left: 35%;
+    position: absolute;
+}
+.logbox{
+    position: absolute;
+    background-color: #2a2a2a;
+    height:62%;
+    width: 36%;;
+    left: 33%;
+    top: 12%;
+}
+.login{
+    top: 19%;
+    left: 45%;
+    position: absolute;
+    height: 65%;
+    width: 15%;
+}
+
+/*register css*/
+.registerbox{
+    position: absolute;
+    background-color: #2a2a2a;
+    height:65%;
+    width: 56%;;
+    left: 26%;
+    top: 11%;
+}
+.register{
+    top: 13%;
+    left: 28%;
+    position: absolute;
+    height: 65%;
+    width: 53%;
+}
+/*already logged in css*/
+.newpasswordbox{
+    position: absolute;
+    background-color: #2a2a2a;
+    height:56%;
+    width: 34%;;
+    left: 34%;
+    top: 11%;
+}
+.welcome{
+    position:absolute;
+    height:20%;
+    width: 20%;
+    left: 40%;
+    top:26%;
+    font-size: x-large;
+    color: white
+}
+.newpassword{
+    top: 30%;
+    left: 41%;
+    position: absolute;
+    height: 65%;
+    width: 53%;
+    color: white;
+}
+.submit{
+    top: 30%;
+    left: 41%;
+    position: absolute;
+    height: 65%;
+    width: 53%;
+    color: white;
+}
+.logout{
+    top: 58%;
+    left: 60%;
+    position: absolute;
+    height: 65%;
+    width: 53%;
+}
