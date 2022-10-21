@@ -33,6 +33,20 @@ def new_business(request):
     return render(request, "base.html", {"form": form})
 
 
+def get_data(request):
+
+    my_data = Listing.objects.all()  # for all the records
+    one_data = Listing.objects.get(
+        pk=1
+    )  # 1 will return the first item change it depending on the data you want
+    context = {
+        "my_data": my_data,
+        "one_data": one_data,
+    }
+
+    return render(request, "get_data.html", context)
+
+
 # class newBusiness(FormView):
 #     form_class = NewBusinessForm
 #     success_url = "/"
@@ -43,19 +57,19 @@ def new_business(request):
 #         return redirect(self.success_url)
 
 
-def homepage(request):
-    # args = {}
-    if request.method == "POST":
-        form = Passwords(request.POST)
-        if form.is_valid():
-            # text = form.cleaned_data['password_name']
-            pass
-        # args = {'form': form, 'text': text}
+# def homepage(request):
+#     # args = {}
+#     if request.method == "POST":
+#         form = Passwords(request.POST)
+#         if form.is_valid():
+#             # text = form.cleaned_data['password_name']
+#             pass
+#         # args = {'form': form, 'text': text}
 
-    else:
-        form = Passwords()
+#     else:
+#         form = Passwords()
 
-    return render(request=request, template_name="base.html", context={"form": form})
+#     return render(request=request, template_name="base.html", context={"form": form})
 
 
 def register_request(request):

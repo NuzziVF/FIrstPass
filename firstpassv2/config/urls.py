@@ -17,8 +17,10 @@ from ast import Import
 from django.contrib import admin
 from django.urls import path, include
 from app import views
+from app.views import *
 
 urlpatterns = [
+    path("get_data/", get_data, name="get_data"),
     path("", views.new_business, name="homepage"),
     path("admin/", admin.site.urls),
     path("register/", views.register_request, name="register"),

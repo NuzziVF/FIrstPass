@@ -41,17 +41,10 @@
 <footer class=>
     <div>
         {% if user.is_authenticated %}
-            <p>welcome {{user.username}}</p>
-            {% comment %} <form action="" method="post">
-                <label for="password_for">Your password name: </label>
-                <input id="password_for" type="text" name="password_for" value="{{ current_name }}">
-                <input type="submit" value="OK">
-            </form> {% endcomment %}
             <form method="post">
                 {% csrf_token %}
                 {{ form.as_p }}
                 {{ obj.passwords_name }}
-
                 <button type='submit'>Submit</button>
             </form>
         {% endif %}
