@@ -1,6 +1,9 @@
 from django import forms
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
+# from app.models import PasswordsModelForm
+from django.forms import ModelForm
+# from app.forms import Passwords
 
 
 # Create your forms here.
@@ -20,5 +23,9 @@ class NewUserForm(UserCreationForm):
 		return user
 
 class Passwords(forms.Form):
-	password_for = forms.EmailField(required=True)
-	passwords = forms.EmailField(required=True)
+	password_name = forms.CharField(required=True, max_length=30)
+	passwords = forms.CharField(required=True, max_length=50)
+ 
+	# class Meta:
+	# 	model = PasswordsModelForm
+	# 	fields = ('passwords_name', 'password_obj')
