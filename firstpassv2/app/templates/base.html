@@ -1,5 +1,4 @@
-
-
+{% load static %}
 <!doctype html>
 <html lang="en">
 <head>
@@ -7,6 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="description" content="">
 <meta name="author" content="">
+<link rel="stylesheet" href="{% static "base.css" %}">
 <title>FirstPass</title>
 
 </head>
@@ -14,17 +14,18 @@
 <body>
 <!--Navbar-->
 <nav>
-    <a>Navbar</a>
+    
+    <div class="newpasswordbox"></div>
     <div>
     <ul>
         {% if user.is_authenticated %}
         
         <li>
-        <a href="/logout">Logout</a>
+        <a class="welcome">Welcome, {{user.username}}</a>
         </li>
         <li>
-        <a>Welcome, {{user.username}}</a>
-        </li>
+            <a class="logout" href="/logout">Logout</a>
+            </li>
         {% else %}
         <li>
         <a href="/login">Login</a>
@@ -39,7 +40,7 @@
 </div>
 
 <footer class=>
-    <div>
+    <div class="newpassword">
         {% if user.is_authenticated %}
             <form method="post">
                 {% csrf_token %}
@@ -47,6 +48,7 @@
                 {{ obj.passwords_name }}
                 <button type='submit'>Submit</button>
             </form>
+            <a href="/get_data/"><button> View Passwords </button></a>
         {% endif %}
     </div>
 </footer>
