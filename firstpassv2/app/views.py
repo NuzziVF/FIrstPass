@@ -1,10 +1,30 @@
 from django.shortcuts import  render, redirect
-from .forms import NewUserForm
+from pyparsing import Optional
+from .forms import NewUserForm, Passwords
 from django.contrib.auth import login, authenticate, logout
 from django.contrib import messages
 from django.contrib.auth.forms import AuthenticationForm
+from django.views.generic import TemplateView
+
+# class HomeView(TemplateView):
+#     template_name = 'base.html'
+    
+#     def get(self, request):
+#         form = Passwords()
+        
 
 def homepage(request):
+    # args = {}
+    if request.method == 'POST':
+        form = Passwords(request.POST)
+        if form.is_valid():
+            # text = form.cleaned_data['password_name', 'passwords']
+            pass
+        # args = {'form': form, 'text': text}
+
+    else:
+        form = Passwords()
+
     return render (request=request, template_name="base.html")
 
 def register_request(request):
