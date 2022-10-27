@@ -1,13 +1,6 @@
-body{
-    background-color: #b2afaf;
-    padding: 0%;
-    margin: 0%;
-    overflow-x: hidden;
-    width: fit-content;
-}
-/* Login Css*/
+/* Login Css
 /*Keycodebox*/
-.logbox{
+/* .logbox{
     height: 67%;
     width: 28%;
     background-color: #7B7B7B;
@@ -22,7 +15,7 @@ body{
     top: 20%;
     left: 35%;
     position: absolute;
-}
+} */
 /* .loginscreen{
     height:17%;
     width: 18%;
@@ -36,10 +29,10 @@ body{
     left: 46%;
     position: absolute;
 } */
-.view {
+/* .view {
     width: 100%;
     height: 100%;
     width: 100%;
     margin: 0em;
     padding: 0em;
-}
+} */ 
