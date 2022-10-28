@@ -1,5 +1,4 @@
 from django.shortcuts import render, redirect
-from pyparsing import Optional
 from .forms import NewUserForm, NewBusinessForm
 from django.contrib.auth import login, authenticate, logout
 from django.contrib import messages
@@ -18,7 +17,7 @@ from app.models import Listing
 #         return context
 
 
-def new_business(request):
+def homepage(request):
     if request.method == "POST":
         form = NewBusinessForm(request.POST)
         if form.is_valid():
@@ -30,7 +29,7 @@ def new_business(request):
     else:
         form = NewBusinessForm()
 
-    return render(request, "base.html", {"form": form})
+    return render(request, "passwords.html", {"form": form})
 
 
 def get_data(request):
@@ -45,31 +44,6 @@ def get_data(request):
     }
 
     return render(request, "get_data.html", context)
-
-
-# class newBusiness(FormView):
-#     form_class = NewBusinessForm
-#     success_url = "/"
-#     template_name = "temp.html"
-
-#     def form_valid(self, form):
-#         form.save()
-#         return redirect(self.success_url)
-
-
-# def homepage(request):
-#     # args = {}
-#     if request.method == "POST":
-#         form = Passwords(request.POST)
-#         if form.is_valid():
-#             # text = form.cleaned_data['password_name']
-#             pass
-#         # args = {'form': form, 'text': text}
-
-#     else:
-#         form = Passwords()
-
-#     return render(request=request, template_name="base.html", context={"form": form})
 
 
 def register_request(request):

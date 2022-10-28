@@ -1,12 +1,15 @@
+{% extends 'base.html' %} {% block content %}
 
-{% extends 'base.html' %}
+<div class="data_assignment">
+  <ul>
+    {% for x in my_data %}
 
-{% block content %}
+    <li>{{ x }} <br /></li>
 
-{% for x in my_data %}
-
-  {{ x }} <br>
-{% endfor %}
-<a href="/"><button> Add Password </button></a>
-
+    {% endfor %}
+  </ul>
+</div>
+<div class="add_password_btn">
+  <a href="/"><button>Add Password</button></a>
+</div>
 {% endblock content %}

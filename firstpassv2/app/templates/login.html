@@ -1,18 +1,16 @@
-{}
-{% extends 'base.html' %}
+{% extends 'base.html' %} {% block content %}
 
-{% block content %}      
-
-<!--Login--> 
-<div class="logbox"></div>
+<!--Login-->
 <div class="login">
-    <h1>Login</h1>
-    <form method="POST">
-        {% csrf_token %}
-        {{ login_form}}
-        <button>Login</button>
-    </form>
-    <p>Don't have an account? <a href="/register">Create an account</a>.</p>
+  <h1>Login</h1>
+  <form method="POST">
+    {% csrf_token %} {{ login_form}}
+    <div class="login_btn_location">
+      <button>Login</button>
+    </div>
+  </form>
+  <p>Don't have an account?</p>
+  <a href="/register"><button>Create an account</button></a>
 </div>
 
 {% endblock %}

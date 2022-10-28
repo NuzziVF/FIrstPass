@@ -20,8 +20,8 @@ from app import views
 from app.views import *
 
 urlpatterns = [
+    path("", views.homepage, name="homepage"),
     path("get_data/", get_data, name="get_data"),
-    path("", views.new_business, name="homepage"),
     path("admin/", admin.site.urls),
     path("register/", views.register_request, name="register"),
     path("login/", views.login_request, name="login"),
