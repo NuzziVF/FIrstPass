@@ -1,6 +1,7 @@
 {% extends 'base.html' %} {% block content %}
 
 <div class="data_assignment">
+  {% comment %}
   <ul>
     {% for x in my_data %}
 
@@ -8,6 +9,22 @@
 
     {% endfor %}
   </ul>
+  {% endcomment %}
+  <table class="password_table">
+    <tr>
+      <th>Name's</th>
+      <th>Passwords's</th>
+    </tr>
+    {% for x in my_lists %}
+    <tr>
+      <td>{{ x.passwords_name }}</td>
+      <td>{{ x.password_obj }}</td>
+      <td>
+        <a href="delete/{{ x.id }}/"><button>delete</button></a>
+      </td>
+    </tr>
+    {% endfor %}
+  </table>
 </div>
 <div class="add_password_btn">
   <a href="/"><button>Add Password</button></a>

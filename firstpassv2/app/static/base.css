@@ -93,7 +93,7 @@ p{
 /* for the get data page */
 .data_assignment {
     top: 23%;
-    left: 40%;
+    left: 34.7%;
     position: absolute;
     width: 25%;
     color: white;
@@ -147,4 +147,17 @@ p{
     color: white;
     width: 19rem;
     text-align: center;
+}
+
+.password_table {
+    width: 23rem;
+}
+
+td {
+    border-bottom: 1px solid #ddd;
+    height: 28px;
+}
+
+th {
+    height: 10px;
 }
