@@ -156,8 +156,24 @@ p{
 td {
     border-bottom: 1px solid #ddd;
     height: 28px;
+    width: 8rem;
 }
 
 th {
     height: 10px;
 }
+
+.scroll-thead{
+    width: 100%;
+    display: inline-table;
+}
+
+.scroll-tbody-y
+{
+    display: block;
+    overflow-y: scroll;
+}
+
+.table-body{
+    height: 13.4rem;
+} 

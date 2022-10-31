@@ -1,20 +1,14 @@
 {% extends 'base.html' %} {% block content %}
 
 <div class="data_assignment">
-  {% comment %}
-  <ul>
-    {% for x in my_data %}
-
-    <li>{{ x }} <br /></li>
-
-    {% endfor %}
-  </ul>
-  {% endcomment %}
   <table class="password_table">
+    <thead class="scroll-thead">
     <tr>
       <th>Name's</th>
       <th>Passwords's</th>
     </tr>
+  </thead>
+  <tbody class="scroll-tbody-y table-body">
     {% for x in my_lists %}
     <tr>
       <td>{{ x.passwords_name }}</td>
@@ -24,6 +18,7 @@
       </td>
     </tr>
     {% endfor %}
+  </thead>
   </table>
 </div>
 <div class="add_password_btn">
